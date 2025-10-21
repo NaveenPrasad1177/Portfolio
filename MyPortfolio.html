@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Prasad Ravichandran - Full Stack & AI Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid 20s linear infinite;
+        }
+
+        @keyframes grid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-label {
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #64ffda;
+            color: #0f2027;
+        }
+
+        .btn-primary:hover {
+            background: #4de5c1;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #64ffda;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+
+        .contact-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-links a:hover {
+            color: #64ffda;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+        }
+
+        .nav-logo {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #0f2027;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #64ffda;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        section:nth-child(odd) {
+            background: #fafafa;
+        }
+
+        h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #0f2027;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #64ffda, #2c5364);
+            border-radius: 2px;
+        }
+
+        .section-intro {
+            font-size: 1.15em;
+            color: #666;
+            max-width: 700px;
+            margin-bottom: 60px;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            border-color: #64ffda;
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #64ffda 0%, #2c5364 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            color: #0f2027;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #f0f0f0;
+            color: #1a1a1a;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: #64ffda;
+            color: #0f2027;
+        }
+
+        .skill-tag.primary {
+            background: linear-gradient(135deg, #64ffda 0%, #2c5364 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin-top: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #64ffda 0%, #2c5364 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -58px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #64ffda;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.2);
+        }
+
+        .experience-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            border-left: 4px solid #64ffda;
+            transition: all 0.3s;
+        }
+
+        .experience-card:hover {
+            box-shadow: 0 10px 50px rgba(0,0,0,0.12);
+            transform: translateX(5px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .experience-header h3 {
+            font-size: 1.6em;
+            color: #0f2027;
+            margin-bottom: 8px;
+        }
+
+        .company-name {
+            color: #64ffda;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .duration {
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .role-description {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-card li {
+            padding-left: 30px;
+            margin-bottom: 12px;
+            position: relative;
+            color: #444;
+            font-size: 1.02em;
+        }
+
+        .experience-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #64ffda;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 60px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+            padding: 30px;
+            color: white;
+        }
+
+        .project-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .project-type {
+            font-size: 0.85em;
+            color: #64ffda;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .project-body {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-description {
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-badge {
+            background: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            color: #2c5364;
+            gap: 12px;
+        }
+
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .achievement-card:hover {
+            border-color: #64ffda;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #64ffda 0%, #2c5364 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            margin: 0 auto 20px;
+        }
+
+        .achievement-card h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #0f2027;
+        }
+
+        .achievement-org {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .education-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            border-top: 4px solid #64ffda;
+            transition: all 0.3s;
+        }
+
+        .education-card:hover {
+            box-shadow: 0 10px 50px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+        }
+
+        .education-card h3 {
+            font-size: 1.5em;
+            color: #0f2027;
+            margin-bottom: 12px;
+        }
+
+        .institution {
+            color: #64ffda;
+            font-weight: 600;
+            font-size: 1.15em;
+            margin-bottom: 10px;
+        }
+
+        .edu-duration {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .modules {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .modules strong {
+            color: #0f2027;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f2027;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 20px;
+            color: #64ffda;
+            font-size: 1.2em;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #64ffda;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #64ffda;
+            color: #0f2027;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #64ffda;
+            color: #0f2027;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(100, 255, 218, 0.4);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 25px;
+            }
+
+            .projects-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        section {
+            animation: fadeIn 0.6s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-content">
+            <div class="hero-label">Full Stack Developer & AI Engineer</div>
+            <h1>Naveen Prasad Ravichandran</h1>
+            <p class="subtitle">Building scalable enterprise solutions with 5+ years of expertise in Java, Angular, Spring Boot, and cutting-edge AI technologies</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="mailto:naveenprasad1177@gmail.com" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="contact-links">
+                <span>📍 Dublin, Ireland</span>
+                <span>📞 +353 89 2022102</span>
+                <a href="mailto:naveenprasad1177@gmail.com">✉️ Email</a>
+                <a href="https://www.linkedin.com/in/naveen-prasad-ravichandran/" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/NaveenPrasad1177" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-logo">NPR</div>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <p class="section-intro">
+                Specialized in full-stack development with deep expertise in enterprise SaaS platforms, microservices architecture, and AI/ML integration. 
+                Proven track record of delivering high-performance solutions that scale.
+            </p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Java (5 years)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Angular (4 years)</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">jqxGrid</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend & APIs</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Spring Boot (4 years)</span>
+                        <span class="skill-tag">JAX-RS</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Microservices</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TF-IDF</span>
+                        <span class="skill-tag">Random Forest</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">LightGBM</span>
+                        <span class="skill-tag">BERT</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">MySQL (4 years)</span>
+                        <span class="skill-tag">Oracle</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">IntelliJ</span>
+                        <span class="skill-tag">Keycloak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p class="section-intro">
+                Over 3.5 years of hands-on experience building enterprise-grade SaaS platforms, leading teams, and delivering solutions that drive business growth.
+            </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div>
+                                <h3>Senior Software Engineer</h3>
+                                <div class="company-name">Bonbloc Technologies, Chennai</div>
+                            </div>
+                            <span class="duration">Aug 2021 - Jan 2025</span>
+                        </div>
+                        <p class="role-description">SaaS Platform Modernization & Enterprise Automation</p>
+                        <ul>
+                            <li>Architected and deployed scalable SaaS platforms using Angular + Spring Boot (Java JAX-RS), achieving 30% improvement in UI responsiveness and 40% increase in backend throughput</li>
+                            <li>Designed and implemented 60+ production-grade RESTful APIs with advanced caching strategies, query optimization, and comprehensive validation layers for enterprise automation modules</li>
+                            <li>Developed sophisticated Excel-style real-time UI components using jqxGrid and SlickGrid, enabling dynamic order management with event-driven data binding and advanced filtering capabilities</li>
+                            <li>Successfully integrated multiple third-party services including PDF generation engines, payment gateways, and reporting libraries into microservice architecture, expanding system capabilities and driving client adoption</li>
+                            <li>Optimized database performance through SQL query tuning and intelligent caching strategies, reducing latency by 45% in high-volume order and inventory operations</li>
+                            <li>Established robust CI/CD pipelines using GitHub Actions and AWS infrastructure (EC2, S3, Lambda), achieving zero-downtime deployments and 99.9% uptime</li>
+                            <li>Mentored and guided 5+ junior developers on software engineering best practices, API design patterns, and Git workflow, introducing standardized coding conventions that improved release stability by 60%</li>
+                            <li>Led cross-functional collaboration with UI/UX designers and QA teams to align product delivery with enterprise client specifications, successfully rolling out solutions across multiple international markets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-intro">
+                A showcase of innovative AI and full-stack projects demonstrating expertise in automation, machine learning, and enterprise software development.
+            </p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">AI/RPA Automation</span>
+                        <h3>Intelligent Employment Permit Processing</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Developed an AI-RPA hybrid system automating the Irish Employment Permit Online System (EPOS) workflow. Built Python-based OCR engine for data extraction, implemented rule-based decision engine for eligibility verification, and designed UiPath bots for end-to-end orchestration. Achieved >90% reduction in processing time and 70% cost savings.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">UiPath</span>
+                            <span class="tech-badge">Tesseract OCR</span>
+                            <span class="tech-badge">Flask</span>
+                        </div>
+                        <a href="https://github.com/NaveenPrasad1177/Intelligent-Automation-of-Employment-Permit-Processing" target="_blank" class="project-link">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Machine Learning</span>
+                        <h3>Multi-Label Email Classification System</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Built an advanced multi-output classification model predicting intent, tone, and resolution of customer service emails using chained ensemble techniques. Implemented TF-IDF with Random Forest, XGBoost, and LightGBM classifiers. Integrated BERT embeddings for sophisticated tone analysis. Achieved 89% overall accuracy with correlation-aware training.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">BERT</span>
+                            <span class="tech-badge">XGBoost</span>
+                            <span class="tech-badge">Flask</span>
+                        </div>
+                        <a href="https://github.com/NaveenPrasad1177/Multi_label_classification" target="_blank" class="project-link">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Computer Vision & AI</span>
+                        <h3>Smart Indoor Plant Recommendation System</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Developed a light-aware AI assistant recommending suitable indoor plants for Irish apartments. Trained custom MobileNetV2-based CNN achieving 92% accuracy in lighting classification. Built RAG pipeline using Ollama LLM with FAISS-indexed database of 2,000+ plant profiles. Automated multi-source web scraping for comprehensive plant metadata.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">MobileNetV2</span>
+                            <span class="tech-badge">FAISS</span>
+                            <span class="tech-badge">Ollama LLM</span>
+                            <span class="tech-badge">Selenium</span>
+                            <span class="tech-badge">Flask</span>
+                        </div>
+                        <a href="https://github.com/NaveenPrasad1177/Smart-Indoor-Plant-Recommendation-System" target="_blank" class="project-link">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Assistive Technology</span>
+                        <h3>Braille-to-Speech Converter</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Developed a computer vision-based assistive AI tool translating printed Braille into English text and speech for visually impaired users. Utilized YOLOv5 for precise Braille cell segmentation, Tesseract OCR for decoding, and Google Text-to-Speech for real-time natural voice output. Delivered low-cost accessibility solution via browser-based interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">YOLOv5</span>
+                            <span class="tech-badge">Tesseract OCR</span>
+                            <span class="tech-badge">gTTS</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Flask</span>
+                        </div>
+                        <a href="https://github.com/NaveenPrasad1177/Braille-to-Speech-Converter" target="_blank" class="project-link">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2>Certifications & Achievements</h2>
+            <p class="section-intro">
+                Professional certifications demonstrating commitment to continuous learning and expertise in emerging technologies.
+            </p>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h4>Oracle Certified Foundation Developer</h4>
+                    <p class="achievement-org">Oracle • 2023</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⛓️</div>
+                    <h4>IBM Blockchain Professional Certificate</h4>
+                    <p class="achievement-org">IBM • 2023</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">☕</div>
+                    <h4>Capgemini Certified Java Developer</h4>
+                    <p class="achievement-org">Capgemini • 2021</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🅰️</div>
+                    <h4>Angular 8 Developer Certification</h4>
+                    <p class="achievement-org">Vskills India • 2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <p class="section-intro">
+                Strong academic foundation combining advanced AI studies with comprehensive software engineering education.
+            </p>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Master of Science in Artificial Intelligence</h3>
+                    <div class="institution">National College of Ireland</div>
+                    <div class="edu-duration">January 2025 - January 2026</div>
+                    <div class="modules">
+                        <strong>Key Modules:</strong>
+                        Machine Learning • Deep Learning • Probability and Statistics • Data Visualization
+                    </div>
+                </div>
+                <div class="education-card">
+                    <h3>Bachelor of Technology in Computer Science</h3>
+                    <div class="institution">Peri Institute of Technology</div>
+                    <div class="edu-duration">June 2016 - June 2020</div>
+                    <div class="modules">
+                        <strong>Key Modules:</strong>
+                        Software Systems • Database Management • Internet Programming • Artificial Intelligence
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Naveen Prasad Ravichandran</h4>
+                    <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">
+                        Senior Software Engineer specializing in full-stack development, enterprise SaaS solutions, and AI/ML integration. Currently pursuing MS in Artificial Intelligence.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#education">Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/naveen-prasad-ravichandran/" target="_blank" class="social-icon" title="LinkedIn">in</a>
+                        <a href="https://github.com/NaveenPrasad1177" target="_blank" class="social-icon" title="GitHub">gh</a>
+                        <a href="mailto:naveenprasad1177@gmail.com" class="social-icon" title="Email">@</a>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); margin-top: 20px; font-size: 0.9em;">
+                        📍 Dublin, Ireland<br>
+                        📞 +353 89 2022102
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Naveen Prasad Ravichandran. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Scroll to top button visibility
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .project-card, .achievement-card, .education-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
