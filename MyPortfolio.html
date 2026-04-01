@@ -60,14 +60,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-label {
@@ -87,20 +81,34 @@
         }
 
         .subtitle {
-            font-size: 1.5em;
-            margin-bottom: 40px;
+            font-size: 1.15em;
+            margin-bottom: 30px;
             opacity: 0.9;
             font-weight: 300;
-            max-width: 700px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .visa-badge {
+            display: inline-block;
+            background: rgba(100,255,218,0.15);
+            border: 1px solid rgba(100,255,218,0.4);
+            color: #64ffda;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
         }
 
         .cta-buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             flex-wrap: wrap;
         }
 
@@ -155,9 +163,7 @@
             gap: 8px;
         }
 
-        .contact-links a:hover {
-            color: #64ffda;
-        }
+        .contact-links a:hover { color: #64ffda; }
 
         /* Navigation */
         nav {
@@ -208,18 +214,11 @@
             transition: width 0.3s;
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+        nav a:hover::after { width: 100%; }
 
         /* Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
-        section:nth-child(odd) {
-            background: #fafafa;
-        }
+        section { padding: 100px 0; }
+        section:nth-child(odd) { background: #fafafa; }
 
         h2 {
             font-size: 2.8em;
@@ -243,9 +242,22 @@
         .section-intro {
             font-size: 1.15em;
             color: #666;
-            max-width: 700px;
+            max-width: 750px;
             margin-bottom: 60px;
             line-height: 1.8;
+        }
+
+        /* Profile Summary */
+        .profile-summary {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            border-left: 4px solid #64ffda;
+            margin-top: 50px;
+            font-size: 1.05em;
+            color: #444;
+            line-height: 1.9;
         }
 
         /* Skills Section */
@@ -405,10 +417,7 @@
             font-size: 1.05em;
         }
 
-        .experience-card ul {
-            list-style: none;
-            padding: 0;
-        }
+        .experience-card ul { list-style: none; padding: 0; }
 
         .experience-card li {
             padding-left: 30px;
@@ -516,6 +525,18 @@
             gap: 12px;
         }
 
+        /* Projects section label */
+        .projects-section-label {
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #64ffda;
+            margin: 60px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(100,255,218,0.2);
+        }
+
         /* Achievements Section */
         .achievements-grid {
             display: grid;
@@ -540,6 +561,10 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.12);
         }
 
+        .achievement-card.in-progress {
+            border: 2px dashed rgba(100,255,218,0.5);
+        }
+
         .achievement-icon {
             width: 70px;
             height: 70px;
@@ -561,6 +586,18 @@
         .achievement-org {
             color: #666;
             font-size: 0.95em;
+        }
+
+        .in-progress-badge {
+            display: inline-block;
+            margin-top: 10px;
+            background: rgba(100,255,218,0.15);
+            color: #2c5364;
+            border: 1px solid rgba(100,255,218,0.5);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
         }
 
         /* Education Section */
@@ -589,6 +626,18 @@
             font-size: 1.5em;
             color: #0f2027;
             margin-bottom: 12px;
+        }
+
+        .honours-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #64ffda 0%, #2c5364 100%);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-left: 10px;
+            vertical-align: middle;
         }
 
         .institution {
@@ -637,13 +686,8 @@
             font-size: 1.2em;
         }
 
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
 
         .footer-links a {
             color: rgba(255,255,255,0.7);
@@ -651,14 +695,9 @@
             transition: color 0.3s;
         }
 
-        .footer-links a:hover {
-            color: #64ffda;
-        }
+        .footer-links a:hover { color: #64ffda; }
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
+        .social-links { display: flex; gap: 15px; }
 
         .social-icon {
             width: 40px;
@@ -705,72 +744,37 @@
             box-shadow: 0 5px 20px rgba(100, 255, 218, 0.4);
         }
 
-        .scroll-top.visible {
-            opacity: 1;
-        }
+        .scroll-top.visible { opacity: 1; }
+        .scroll-top:hover { transform: translateY(-5px); }
 
-        .scroll-top:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .subtitle {
-                font-size: 1.2em;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .timeline {
-                padding-left: 20px;
-            }
-
-            .timeline-item {
-                padding-left: 25px;
-            }
-
-            .projects-grid,
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 200px;
-            }
+            h1 { font-size: 2.5em; }
+            .subtitle { font-size: 1.1em; }
+            h2 { font-size: 2em; }
+            nav ul { display: none; }
+            .timeline { padding-left: 20px; }
+            .timeline-item { padding-left: 25px; }
+            .projects-grid, .education-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 200px; }
         }
 
-        /* Loading Animation */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        section {
-            animation: fadeIn 0.6s ease-in;
-        }
+        section { animation: fadeIn 0.6s ease-in; }
     </style>
 </head>
 <body>
     <header>
         <div class="hero-content">
-            <div class="hero-label">Full Stack Developer & AI Engineer</div>
+            <div class="hero-label">Software Engineer III · Full Stack & AI Engineer</div>
             <h1>Naveen Prasad Ravichandran</h1>
-            <p class="subtitle">Building scalable enterprise solutions with 5+ years of expertise in Java, Angular, Spring Boot, and cutting-edge AI technologies</p>
+            <p class="subtitle">4+ years designing secure, scalable enterprise systems in financial services — specialising in Full Stack Java, microservices, distributed systems, and AI/ML integration. Currently pursuing MSc in Artificial Intelligence (First Class Honours).</p>
+            <div class="visa-badge">🇮🇪 Stamp 1G — No Sponsorship Required</div>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="mailto:naveenprasad1177@gmail.com" class="btn btn-secondary">Get In Touch</a>
@@ -781,6 +785,7 @@
                 <a href="mailto:naveenprasad1177@gmail.com">✉️ Email</a>
                 <a href="https://www.linkedin.com/in/naveen-prasad-ravichandran/" target="_blank">💼 LinkedIn</a>
                 <a href="https://github.com/NaveenPrasad1177" target="_blank">💻 GitHub</a>
+                <a href="https://naveenprasad1177.github.io/Portfolio" target="_blank">🌐 Portfolio</a>
             </div>
         </div>
     </header>
@@ -789,42 +794,59 @@
         <div class="container">
             <div class="nav-logo">NPR</div>
             <ul>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#achievements">Certifications</a></li>
                 <li><a href="#education">Education</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- About / Profile Summary -->
+    <section id="about">
+        <div class="container">
+            <h2>Profile</h2>
+            <div class="profile-summary">
+                Software Engineer III / Senior Software Engineer with <strong>4+ years of experience</strong> designing and delivering secure, scalable, and resilient enterprise software systems in <strong>financial services and investment banking domains</strong>. Strong expertise in Full Stack Java, Python, and JavaScript, building microservices architectures, distributed systems, and REST APIs using Spring Boot and cloud technologies (AWS). Familiar with multi-cloud environments including AWS, Azure, and GCP.
+                <br><br>
+                Hands-on experience across the full Software Development Life Cycle (SDLC) including system design, application development, testing, debugging, and production support in large corporate environments. Proven ability in technical troubleshooting, secure coding, application resiliency, and maintaining high-quality production code with strong operational stability.
+                <br><br>
+                Experienced in data analysis on large datasets, algorithm optimisation, CI/CD pipelines, Agile methodologies, and performance engineering for high-availability systems.
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
     <section id="skills">
         <div class="container">
             <h2>Technical Expertise</h2>
             <p class="section-intro">
-                Specialized in full-stack development with deep expertise in enterprise SaaS platforms, microservices architecture, and AI/ML integration. 
-                Proven track record of delivering high-performance solutions that scale.
+                Specialized in full-stack development with deep expertise in enterprise SaaS platforms, microservices architecture, distributed systems, and AI/ML integration. Proven track record of delivering high-performance solutions that scale.
             </p>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag primary">Java (5 years)</span>
+                        <span class="skill-tag primary">Java (Full Stack)</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">C</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🎨</div>
                     <h3>Frontend Development</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag primary">Angular (4 years)</span>
+                        <span class="skill-tag primary">Angular</span>
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">Next.js</span>
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">RxJS</span>
                         <span class="skill-tag">jqxGrid</span>
                     </div>
                 </div>
@@ -832,12 +854,48 @@
                     <div class="skill-icon">⚙️</div>
                     <h3>Backend & APIs</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag primary">Spring Boot (4 years)</span>
+                        <span class="skill-tag primary">Spring Boot</span>
                         <span class="skill-tag">JAX-RS</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">Django</span>
                         <span class="skill-tag">REST APIs</span>
                         <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Event-Driven Architecture</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📨</div>
+                    <h3>Messaging & Distributed Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Apache Kafka</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Distributed Locking</span>
+                        <span class="skill-tag">Concurrency Control</span>
+                        <span class="skill-tag">SQS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">AWS (Lambda, S3, ECS, DynamoDB, SQS, EventBridge, CloudWatch)</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">CloudFormation</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">DynamoDB (NoSQL)</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -850,37 +908,34 @@
                         <span class="skill-tag">XGBoost</span>
                         <span class="skill-tag">LightGBM</span>
                         <span class="skill-tag">BERT</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag primary">MySQL (4 years)</span>
-                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">MobileNetV2</span>
+                        <span class="skill-tag">RAG</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🛠️</div>
-                    <h3>Tools & DevOps</h3>
+                    <h3>Engineering Practices</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub Actions</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">IntelliJ</span>
+                        <span class="skill-tag">System Design (HLD/LLD)</span>
+                        <span class="skill-tag">TDD</span>
+                        <span class="skill-tag">Secure Coding</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Production Support</span>
                         <span class="skill-tag">Keycloak</span>
+                        <span class="skill-tag">Postman</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience">
         <div class="container">
             <h2>Professional Experience</h2>
             <p class="section-intro">
-                Over 3.5 years of hands-on experience building enterprise-grade SaaS platforms, leading teams, and delivering solutions that drive business growth.
+                4+ years of hands-on experience building enterprise-grade SaaS platforms in financial services, leading teams, and delivering resilient distributed systems.
             </p>
             <div class="timeline">
                 <div class="timeline-item">
@@ -890,18 +945,23 @@
                                 <h3>Senior Software Engineer</h3>
                                 <div class="company-name">Bonbloc Technologies, Chennai</div>
                             </div>
-                            <span class="duration">Aug 2021 - Jan 2025</span>
+                            <span class="duration">Aug 2021 – Jan 2025</span>
                         </div>
-                        <p class="role-description">SaaS Platform Modernization & Enterprise Automation</p>
+                        <p class="role-description">Full Stack Java · Enterprise Systems · SaaS Platform Modernisation · Financial Services</p>
                         <ul>
-                            <li>Architected and deployed scalable SaaS platforms using Angular + Spring Boot (Java JAX-RS), achieving 30% improvement in UI responsiveness and 40% increase in backend throughput</li>
-                            <li>Designed and implemented 60+ production-grade RESTful APIs with advanced caching strategies, query optimization, and comprehensive validation layers for enterprise automation modules</li>
-                            <li>Developed sophisticated Excel-style real-time UI components using jqxGrid and SlickGrid, enabling dynamic order management with event-driven data binding and advanced filtering capabilities</li>
-                            <li>Successfully integrated multiple third-party services including PDF generation engines, payment gateways, and reporting libraries into microservice architecture, expanding system capabilities and driving client adoption</li>
-                            <li>Optimized database performance through SQL query tuning and intelligent caching strategies, reducing latency by 45% in high-volume order and inventory operations</li>
-                            <li>Established robust CI/CD pipelines using GitHub Actions and AWS infrastructure (EC2, S3, Lambda), achieving zero-downtime deployments and 99.9% uptime</li>
-                            <li>Mentored and guided 5+ junior developers on software engineering best practices, API design patterns, and Git workflow, introducing standardized coding conventions that improved release stability by 60%</li>
-                            <li>Led cross-functional collaboration with UI/UX designers and QA teams to align product delivery with enterprise client specifications, successfully rolling out solutions across multiple international markets</li>
+                            <li>Designed and developed Full Stack Java enterprise systems using Spring Boot, Angular, React, and AWS, improving system performance by 30% in financial services platforms.</li>
+                            <li>Built and maintained microservices architectures and REST APIs using Java, JAX-RS, and AWS Lambda, enabling high-throughput transaction processing and distributed systems integration.</li>
+                            <li>Executed end-to-end application development (SDLC) including design, coding, testing, debugging, and deployment, improving release efficiency by 50% using CI/CD pipelines (Jenkins).</li>
+                            <li>Developed high-availability and fault-tolerant systems by implementing application resiliency patterns, retry logic, and monitoring (CloudWatch, X-Ray), ensuring operational stability.</li>
+                            <li>Performed advanced debugging and technical troubleshooting in large-scale production environments, reducing critical incidents and downtime.</li>
+                            <li>Produced architecture and design artefacts (HLD, LLD, API contracts) ensuring enterprise architecture compliance and system design constraints.</li>
+                            <li>Analysed large and diverse datasets using SQL and backend services, identifying performance bottlenecks and hidden system patterns to improve system efficiency by 30%.</li>
+                            <li>Optimised algorithms and database queries, reducing latency by 45% in high-volume order and inventory operations.</li>
+                            <li>Implemented secure coding practices and code maintenance strategies, reducing production defects by 25%.</li>
+                            <li>Built data-driven UI applications using Angular, RxJS, and jqxGrid, enabling real-time financial data visualisation and reporting.</li>
+                            <li>Established robust CI/CD pipelines using GitHub Actions and AWS infrastructure (EC2, S3, Lambda), achieving zero-downtime deployments and 99.9% uptime.</li>
+                            <li>Mentored 5+ junior developers on software engineering best practices, API design patterns, and Git workflow, improving team productivity by 20% and release stability by 60%.</li>
+                            <li>Collaborated in Agile teams, contributing to continuous improvement, engineering best practices, and cross-functional delivery for multiple international markets.</li>
                         </ul>
                     </div>
                 </div>
@@ -909,12 +969,66 @@
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
         <div class="container">
             <h2>Featured Projects</h2>
             <p class="section-intro">
-                A showcase of innovative AI and full-stack projects demonstrating expertise in automation, machine learning, and enterprise software development.
+                A showcase of engineering and AI projects spanning distributed systems, machine learning, computer vision, and intelligent automation.
             </p>
+
+            <!-- Engineering Projects -->
+            <div class="projects-section-label">⚙️ Engineering Projects</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Distributed Systems · Java · Kafka · Redis</span>
+                        <h3>Event-Driven Ticket Booking Platform</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Designed and developed a microservices-based distributed system using Java, Spring Boot, and Spring Cloud. Implemented event-driven architecture with Apache Kafka enabling decoupled communication across Booking, Payment, and Notification services. Built concurrency control and seat-locking with Redis TTL to prevent race conditions, and Saga-based distributed transactions for data consistency. Secured with JWT authentication via Spring Cloud Gateway.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">Apache Kafka</span>
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">AWS ECS</span>
+                            <span class="tech-badge">JWT</span>
+                        </div>
+                        <a href="https://github.com/NaveenPrasad1177" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Serverless · AWS · Event-Driven</span>
+                        <h3>Serverless Subscription Management Platform</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Designed and implemented an event-driven serverless architecture using AWS Lambda, API Gateway, DynamoDB, and EventBridge. Built secure production-grade REST APIs with Cognito authentication, asynchronous SQS processing pipelines (40% performance gain), and DynamoDB Streams for real-time audit logging. Applied fault-tolerance patterns with retry logic and DLQ, with full observability via CloudWatch and X-Ray. Deployed via AWS SAM and CI/CD pipelines.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">AWS Lambda</span>
+                            <span class="tech-badge">DynamoDB</span>
+                            <span class="tech-badge">SQS</span>
+                            <span class="tech-badge">EventBridge</span>
+                            <span class="tech-badge">Cognito</span>
+                            <span class="tech-badge">CloudWatch</span>
+                            <span class="tech-badge">X-Ray</span>
+                            <span class="tech-badge">AWS SAM</span>
+                        </div>
+                        <a href="https://github.com/NaveenPrasad1177" target="_blank" class="project-link">View on GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic / AI Projects -->
+            <div class="projects-section-label" style="margin-top:60px;">🤖 AI & Academic Projects</div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -923,7 +1037,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Developed an AI-RPA hybrid system automating the Irish Employment Permit Online System (EPOS) workflow. Built Python-based OCR engine for data extraction, implemented rule-based decision engine for eligibility verification, and designed UiPath bots for end-to-end orchestration. Achieved >90% reduction in processing time and 70% cost savings.
+                            Developed an AI-RPA hybrid system automating the Irish Employment Permit Online System (EPOS) workflow. Built Python-based OCR engine for data extraction, implemented rule-based decision engine for eligibility verification, and designed UiPath bots for end-to-end orchestration. Achieved &gt;90% reduction in processing time and 40% reduction in manual effort.
                         </p>
                         <div class="project-tech">
                             <span class="tech-badge">Python</span>
@@ -931,9 +1045,7 @@
                             <span class="tech-badge">Tesseract OCR</span>
                             <span class="tech-badge">Flask</span>
                         </div>
-                        <a href="https://github.com/NaveenPrasad1177/Intelligent-Automation-of-Employment-Permit-Processing" target="_blank" class="project-link">
-                            View on GitHub →
-                        </a>
+                        <a href="https://github.com/NaveenPrasad1177/Intelligent-Automation-of-Employment-Permit-Processing" target="_blank" class="project-link">View on GitHub →</a>
                     </div>
                 </div>
 
@@ -944,7 +1056,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Built an advanced multi-output classification model predicting intent, tone, and resolution of customer service emails using chained ensemble techniques. Implemented TF-IDF with Random Forest, XGBoost, and LightGBM classifiers. Integrated BERT embeddings for sophisticated tone analysis. Achieved 89% overall accuracy with correlation-aware training.
+                            Built an advanced multi-output classification model predicting intent, tone, and resolution of customer service emails using chained ensemble techniques. Implemented TF-IDF with Random Forest, XGBoost, and LightGBM classifiers with BERT embeddings for sophisticated tone analysis. Achieved 89% overall accuracy. Deployed as a Flask API for automated email routing.
                         </p>
                         <div class="project-tech">
                             <span class="tech-badge">Python</span>
@@ -953,9 +1065,7 @@
                             <span class="tech-badge">XGBoost</span>
                             <span class="tech-badge">Flask</span>
                         </div>
-                        <a href="https://github.com/NaveenPrasad1177/Multi_label_classification" target="_blank" class="project-link">
-                            View on GitHub →
-                        </a>
+                        <a href="https://github.com/NaveenPrasad1177/Multi_label_classification" target="_blank" class="project-link">View on GitHub →</a>
                     </div>
                 </div>
 
@@ -966,7 +1076,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Developed a light-aware AI assistant recommending suitable indoor plants for Irish apartments. Trained custom MobileNetV2-based CNN achieving 92% accuracy in lighting classification. Built RAG pipeline using Ollama LLM with FAISS-indexed database of 2,000+ plant profiles. Automated multi-source web scraping for comprehensive plant metadata.
+                            Developed a light-aware AI assistant recommending suitable indoor plants for Irish apartments. Trained custom MobileNetV2-based CNN achieving 92% accuracy in lighting classification. Built RAG pipeline using Ollama LLM with FAISS-indexed database of 2,000+ plant profiles. Automated multi-source web scraping for plant metadata.
                         </p>
                         <div class="project-tech">
                             <span class="tech-badge">MobileNetV2</span>
@@ -975,9 +1085,7 @@
                             <span class="tech-badge">Selenium</span>
                             <span class="tech-badge">Flask</span>
                         </div>
-                        <a href="https://github.com/NaveenPrasad1177/Smart-Indoor-Plant-Recommendation-System" target="_blank" class="project-link">
-                            View on GitHub →
-                        </a>
+                        <a href="https://github.com/NaveenPrasad1177/Smart-Indoor-Plant-Recommendation-System" target="_blank" class="project-link">View on GitHub →</a>
                     </div>
                 </div>
 
@@ -988,7 +1096,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Developed a computer vision-based assistive AI tool translating printed Braille into English text and speech for visually impaired users. Utilized YOLOv5 for precise Braille cell segmentation, Tesseract OCR for decoding, and Google Text-to-Speech for real-time natural voice output. Delivered low-cost accessibility solution via browser-based interface.
+                            Developed a computer vision-based assistive AI tool translating printed Braille into English text and speech for visually impaired users. Utilised YOLOv5 for Braille cell segmentation, Tesseract OCR for decoding, and Google Text-to-Speech for real-time voice output. Delivered as a low-cost browser-based interface.
                         </p>
                         <div class="project-tech">
                             <span class="tech-badge">YOLOv5</span>
@@ -997,15 +1105,14 @@
                             <span class="tech-badge">Django</span>
                             <span class="tech-badge">Flask</span>
                         </div>
-                        <a href="https://github.com/NaveenPrasad1177/Braille-to-Speech-Converter" target="_blank" class="project-link">
-                            View on GitHub →
-                        </a>
+                        <a href="https://github.com/NaveenPrasad1177/Braille-to-Speech-Converter" target="_blank" class="project-link">View on GitHub →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Certifications -->
     <section id="achievements">
         <div class="container">
             <h2>Certifications & Achievements</h2>
@@ -1013,6 +1120,13 @@
                 Professional certifications demonstrating commitment to continuous learning and expertise in emerging technologies.
             </p>
             <div class="achievements-grid">
+                <div class="achievement-card in-progress">
+                    <div class="achievement-icon">☁️</div>
+                    <h4>AWS Certified Developer – Associate</h4>
+                    <p class="achievement-org">Amazon Web Services</p>
+                    <span class="in-progress-badge">🔄 In Progress</span>
+                    <p class="achievement-org" style="margin-top:8px;font-size:0.85em;">Lambda · API Gateway · DynamoDB · SQS · EventBridge · CloudWatch · X-Ray</p>
+                </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">🏆</div>
                     <h4>Oracle Certified Foundation Developer</h4>
@@ -1030,13 +1144,14 @@
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">🅰️</div>
-                    <h4>Angular 8 Developer Certification</h4>
+                    <h4>Angular Developer Certification</h4>
                     <p class="achievement-org">Vskills India • 2021</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Education -->
     <section id="education">
         <div class="container">
             <h2>Education</h2>
@@ -1045,21 +1160,21 @@
             </p>
             <div class="education-grid">
                 <div class="education-card">
-                    <h3>Master of Science in Artificial Intelligence</h3>
+                    <h3>Master of Science in Artificial Intelligence <span class="honours-badge">First Class Honours</span></h3>
                     <div class="institution">National College of Ireland</div>
-                    <div class="edu-duration">January 2025 - January 2026</div>
+                    <div class="edu-duration">January 2025 – February 2026</div>
                     <div class="modules">
                         <strong>Key Modules:</strong>
-                        Machine Learning • Deep Learning • Probability and Statistics • Data Visualization
+                        Machine Learning · Deep Learning · Probability and Statistics · Data Visualisation
                     </div>
                 </div>
                 <div class="education-card">
-                    <h3>Bachelor of Technology in Computer Science</h3>
-                    <div class="institution">Peri Institute of Technology</div>
-                    <div class="edu-duration">June 2016 - June 2020</div>
+                    <h3>Bachelor of Technology in Computer Science & Engineering</h3>
+                    <div class="institution">Anna University / Peri Institute of Technology</div>
+                    <div class="edu-duration">June 2016 – June 2020</div>
                     <div class="modules">
                         <strong>Key Modules:</strong>
-                        Software Systems • Database Management • Internet Programming • Artificial Intelligence
+                        Software Systems · Database Management · Internet Programming · Artificial Intelligence
                     </div>
                 </div>
             </div>
@@ -1072,16 +1187,17 @@
                 <div class="footer-section">
                     <h4>Naveen Prasad Ravichandran</h4>
                     <p style="color: rgba(255,255,255,0.7); line-height: 1.8;">
-                        Senior Software Engineer specializing in full-stack development, enterprise SaaS solutions, and AI/ML integration. Currently pursuing MS in Artificial Intelligence.
+                        Senior Software Engineer specialising in Full Stack Java, enterprise distributed systems, and AI/ML integration. Currently pursuing MSc in Artificial Intelligence (First Class Honours) at National College of Ireland.
                     </p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#achievements">Certifications</a></li>
                         <li><a href="#education">Education</a></li>
                     </ul>
                 </div>
@@ -1094,7 +1210,8 @@
                     </div>
                     <p style="color: rgba(255,255,255,0.7); margin-top: 20px; font-size: 0.9em;">
                         📍 Dublin, Ireland<br>
-                        📞 +353 89 2022102
+                        📞 +353 89 2022102<br>
+                        🇮🇪 Stamp 1G — No sponsorship required
                     </p>
                 </div>
             </div>
@@ -1107,7 +1224,6 @@
     <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
     <script>
-        // Scroll to top button visibility
         window.addEventListener('scroll', function() {
             const scrollTop = document.querySelector('.scroll-top');
             if (window.pageYOffset > 300) {
@@ -1117,25 +1233,15 @@
             }
         });
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
 
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
@@ -1144,7 +1250,7 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
 
         document.querySelectorAll('.skill-card, .project-card, .achievement-card, .education-card').forEach(el => {
             el.style.opacity = '0';
